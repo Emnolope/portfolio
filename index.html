@@ -8,9 +8,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: monospace}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: monospace
+}
+#overlayImage {
+  position: fixed;  /* Fixed/sticky position */
+  top: 0;
+  left: 0;
+  width: 100vw;     /* Full width */
+  height: 100vh;    /* Full height */
+  z-index: 9999;    /* Appear on top of everything else */
+  cursor: pointer;  /* Makes it clear the image can be clicked on */
+}
 </style>
 </head>
+<img src="https://emnolope.github.io/portfolio/nope.png" id="overlayImage" onclick="hideImage()" alt="Click to close">
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- !PAGE CONTENT! -->
@@ -78,6 +90,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: monospace}
   <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
 </div>
-
+<script>
+  function hideImage() {
+  document.getElementById('overlayImage').style.display = 'none';
+}
+</script>
 </body>
+
 </html>
